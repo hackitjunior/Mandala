@@ -1,24 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Mood Selection View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MoodSelectionViewController" customModule="Mandala" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lil-rZ-lxr">
+                                <rect key="frame" x="103.5" y="770" width="207" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="Gnw-2j-Ssm"/>
+                                </constraints>
+                                <state key="normal" title="Add mood">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1r7-Ct-EwD">
+                                <rect key="frame" x="0.0" y="872" width="414" height="24"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Rmw-vV-gxk">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="24"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="fQh-SJ-KVo">
+                                            <rect key="frame" x="0.0" y="8" width="414" height="50"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="50" id="WR4-tb-ftv"/>
+                                            </constraints>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="fQh-SJ-KVo" secondAttribute="bottomMargin" id="8uQ-6d-IvC"/>
+                                        <constraint firstItem="fQh-SJ-KVo" firstAttribute="leading" secondItem="Rmw-vV-gxk" secondAttribute="leadingMargin" constant="-8" id="Rwx-nW-dJw"/>
+                                        <constraint firstItem="fQh-SJ-KVo" firstAttribute="top" secondItem="Rmw-vV-gxk" secondAttribute="top" constant="8" id="ccw-kU-zl5"/>
+                                        <constraint firstAttribute="trailing" secondItem="fQh-SJ-KVo" secondAttribute="trailingMargin" id="s5G-4h-H8C"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="regular"/>
+                            </visualEffectView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="1r7-Ct-EwD" secondAttribute="bottom" id="0Hh-Hh-nat"/>
+                            <constraint firstAttribute="trailing" secondItem="1r7-Ct-EwD" secondAttribute="trailing" id="7Sh-X8-AVA"/>
+                            <constraint firstItem="lil-rZ-lxr" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.5" id="KMc-dY-9bp"/>
+                            <constraint firstItem="1r7-Ct-EwD" firstAttribute="top" secondItem="lil-rZ-lxr" secondAttribute="bottom" constant="54" id="MGk-4e-pNm"/>
+                            <constraint firstItem="1r7-Ct-EwD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Rue-MI-Cbd"/>
+                            <constraint firstItem="lil-rZ-lxr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kKu-ca-TZK"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="addMoodButton" destination="lil-rZ-lxr" id="JGc-ox-MMh"/>
+                        <outlet property="stackView" destination="fQh-SJ-KVo" id="sUG-wl-yDR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="121.73913043478262" y="87.723214285714278"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

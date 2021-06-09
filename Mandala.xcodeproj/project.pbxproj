@@ -21,6 +21,7 @@
 		F24C0865266FD709008E7A21 /* UIImage+Mandala.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24C0864266FD709008E7A21 /* UIImage+Mandala.swift */; };
 		F2693BC2267113330089905A /* MoodListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2693BC1267113330089905A /* MoodListTableViewController.swift */; };
 		F2693BC72671161E0089905A /* MoodsConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2693BC62671161E0089905A /* MoodsConfigurable.swift */; };
+		F2693BCC267122B40089905A /* ImageSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2693BCB267122B40089905A /* ImageSelector.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		F24C0864266FD709008E7A21 /* UIImage+Mandala.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Mandala.swift"; sourceTree = "<group>"; };
 		F2693BC1267113330089905A /* MoodListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodListTableViewController.swift; sourceTree = "<group>"; };
 		F2693BC62671161E0089905A /* MoodsConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodsConfigurable.swift; sourceTree = "<group>"; };
+		F2693BCB267122B40089905A /* ImageSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelector.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 				F24C0864266FD709008E7A21 /* UIImage+Mandala.swift */,
 				F2693BC1267113330089905A /* MoodListTableViewController.swift */,
 				F2693BC62671161E0089905A /* MoodsConfigurable.swift */,
+				F2693BCB267122B40089905A /* ImageSelector.swift */,
 			);
 			path = Mandala;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 				F24C0823266FD298008E7A21 /* AppDelegate.swift in Sources */,
 				F24C0860266FD670008E7A21 /* UIColor+Mandala.swift in Sources */,
 				F24C0865266FD709008E7A21 /* UIImage+Mandala.swift in Sources */,
+				F2693BCC267122B40089905A /* ImageSelector.swift in Sources */,
 				F24C0825266FD298008E7A21 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

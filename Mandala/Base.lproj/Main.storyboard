@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -16,14 +17,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i2a-uH-lp2">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <connections>
+                                    <segue destination="4QI-OE-R6a" kind="embed" identifier="embedContainerViewController" id="9fu-py-dlx"/>
+                                </connections>
+                            </containerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lil-rZ-lxr">
                                 <rect key="frame" x="103.5" y="770" width="207" height="48"/>
+                                <color key="backgroundColor" name="AccentColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="Gnw-2j-Ssm"/>
                                 </constraints>
                                 <state key="normal" title="Add mood">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="addMoodTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s6T-Tl-CTA"/>
+                                </connections>
                             </button>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1r7-Ct-EwD">
                                 <rect key="frame" x="0.0" y="872" width="414" height="24"/>
@@ -53,10 +64,14 @@
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="1r7-Ct-EwD" secondAttribute="bottom" id="0Hh-Hh-nat"/>
                             <constraint firstAttribute="trailing" secondItem="1r7-Ct-EwD" secondAttribute="trailing" id="7Sh-X8-AVA"/>
+                            <constraint firstItem="i2a-uH-lp2" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Ibx-Mr-Qji"/>
                             <constraint firstItem="lil-rZ-lxr" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.5" id="KMc-dY-9bp"/>
                             <constraint firstItem="1r7-Ct-EwD" firstAttribute="top" secondItem="lil-rZ-lxr" secondAttribute="bottom" constant="54" id="MGk-4e-pNm"/>
                             <constraint firstItem="1r7-Ct-EwD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Rue-MI-Cbd"/>
+                            <constraint firstAttribute="trailing" secondItem="i2a-uH-lp2" secondAttribute="trailing" id="dzM-OZ-x6X"/>
+                            <constraint firstItem="i2a-uH-lp2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ge2-33-5s3"/>
                             <constraint firstItem="lil-rZ-lxr" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kKu-ca-TZK"/>
+                            <constraint firstAttribute="bottom" secondItem="i2a-uH-lp2" secondAttribute="bottom" id="sU2-wl-dLu"/>
                         </constraints>
                     </view>
                     <connections>
@@ -68,8 +83,55 @@
             </objects>
             <point key="canvasLocation" x="121.73913043478262" y="87.723214285714278"/>
         </scene>
+        <!--Mood List Table View Controller-->
+        <scene sceneID="MHm-xp-h0x">
+            <objects>
+                <tableViewController id="4QI-OE-R6a" customClass="MoodListTableViewController" customModule="Mandala" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="djg-un-6UJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="UITableViewCell" textLabel="Ppy-RM-bdU" detailTextLabel="8pC-ac-Rb2" style="IBUITableViewCellStyleSubtitle" id="Ayv-Jk-OlQ">
+                                <rect key="frame" x="0.0" y="28" width="414" height="55.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ayv-Jk-OlQ" id="tAe-nu-SPQ">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="55.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Ppy-RM-bdU">
+                                            <rect key="frame" x="20" y="10" width="33" height="20.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8pC-ac-Rb2">
+                                            <rect key="frame" x="20" y="31.5" width="44" height="14.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="4QI-OE-R6a" id="He5-2S-rJw"/>
+                            <outlet property="delegate" destination="4QI-OE-R6a" id="IZ4-UB-uLa"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9xV-I3-RhJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="936" y="88"/>
+        </scene>
     </scenes>
     <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -19,6 +19,8 @@
 		F24C085B266FD383008E7A21 /* MoodEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24C085A266FD383008E7A21 /* MoodEntry.swift */; };
 		F24C0860266FD670008E7A21 /* UIColor+Mandala.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24C085F266FD670008E7A21 /* UIColor+Mandala.swift */; };
 		F24C0865266FD709008E7A21 /* UIImage+Mandala.swift in Sources */ = {isa = PBXBuildFile; fileRef = F24C0864266FD709008E7A21 /* UIImage+Mandala.swift */; };
+		F2693BC2267113330089905A /* MoodListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2693BC1267113330089905A /* MoodListTableViewController.swift */; };
+		F2693BC72671161E0089905A /* MoodsConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2693BC62671161E0089905A /* MoodsConfigurable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		F24C085A266FD383008E7A21 /* MoodEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodEntry.swift; sourceTree = "<group>"; };
 		F24C085F266FD670008E7A21 /* UIColor+Mandala.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Mandala.swift"; sourceTree = "<group>"; };
 		F24C0864266FD709008E7A21 /* UIImage+Mandala.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Mandala.swift"; sourceTree = "<group>"; };
+		F2693BC1267113330089905A /* MoodListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodListTableViewController.swift; sourceTree = "<group>"; };
+		F2693BC62671161E0089905A /* MoodsConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodsConfigurable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +122,8 @@
 				F24C085A266FD383008E7A21 /* MoodEntry.swift */,
 				F24C085F266FD670008E7A21 /* UIColor+Mandala.swift */,
 				F24C0864266FD709008E7A21 /* UIImage+Mandala.swift */,
+				F2693BC1267113330089905A /* MoodListTableViewController.swift */,
+				F2693BC62671161E0089905A /* MoodsConfigurable.swift */,
 			);
 			path = Mandala;
 			sourceTree = "<group>";
@@ -272,7 +278,9 @@
 			files = (
 				F24C0856266FD33D008E7A21 /* Mood.swift in Sources */,
 				F24C0827266FD298008E7A21 /* MoodSelectionViewController.swift in Sources */,
+				F2693BC2267113330089905A /* MoodListTableViewController.swift in Sources */,
 				F24C085B266FD383008E7A21 /* MoodEntry.swift in Sources */,
+				F2693BC72671161E0089905A /* MoodsConfigurable.swift in Sources */,
 				F24C0823266FD298008E7A21 /* AppDelegate.swift in Sources */,
 				F24C0860266FD670008E7A21 /* UIColor+Mandala.swift in Sources */,
 				F24C0865266FD709008E7A21 /* UIImage+Mandala.swift in Sources */,
